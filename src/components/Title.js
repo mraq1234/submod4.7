@@ -1,17 +1,10 @@
 import React from 'react';
-import style from './Title.css';
+import style from './css/Title.css';
 
-class Title extends React.Component {
-    constructor(props) {
-        super(props);
-    }
-    render() {
-        return (
-            <div className={style.TodoTitle}>
-                ToDo list ({this.props.todos.length})
-            </div>
-        )
-    }
-}
+const Title = ({todosNumber}) => <div className={style.TodoTitle}>ToDo list ({todosNumber}):</div>;
+
+Title.propTypes = {
+    todosNumber: React.PropTypes.number.isRequired
+};
 
 export default Title;
