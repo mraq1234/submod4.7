@@ -1,0 +1,24 @@
+.formTodo {
+    width: 400px;
+    margin: 20px 0 20px 0;
+    text-align: center;
+}
+.inputTodo {
+    width:330px;
+    font-size: 20px;
+    margin: 0;
+    padding: 0;
+}
+.btnSubmit {
+    width: 60px;
+    background-color: darkorange;
+    color: white;
+    font-size: 20px;
+    text-align: center;
+    margin-left: 5px;
+    padding-right: 4px;
+    border: 1px solid gray;
+}
+.btnSubmit:hover{
+    background-color: red;
+}

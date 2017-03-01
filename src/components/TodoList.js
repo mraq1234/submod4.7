@@ -1,26 +1,22 @@
 import React from 'react';
 import style from './css/TodoList.css';
+import Todo from './Todo.js'
 
-const TodoList = (props) => {
+const TodoList = ({todos, removeFunc}) => {
         return(
-        <ul>{props.todos.map(
-            element => {
+        <div className={style.todoList}>
+            {todos.map(element => {
                 return(
-                    <li
-                        id={element.id}
-                        key={element.id}
-                        onClick={props.remove}
-                        title='click to remove'
-                    >{element.text}
-                    </li>
+                    <Todo key={element.id} id={element.id} removeFunc={removeFunc} todoText={element.text}/>
                 );}
             )}
-        </ul>
-        );}
+        </div>
+        );
+    }
 
 TodoList.propTypes = {
     todos: React.PropTypes.array.isRequired,
-    remove: React.PropTypes.func.isRequired
+    removeFunc: React.PropTypes.func.isRequired
 };
 
 export default TodoList;

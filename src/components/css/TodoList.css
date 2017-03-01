@@ -1,19 +1,5 @@
-ul {
-
+.todoList {
     width: 400px;
-}
-li {
-   list-style-type: none;
-   border: 1px black solid;
-   font-size: 1.5em; 
-   margin: 3px 0;
-   background: lightblue;
-   padding-left: 20px;
-   padding-top: 20px;
-   height: 40px;
-   text-align: center;
-}
-li:hover {
-    background: lightgrey;
-    color: red;
+    max-width: 400px;
+    display: table;
 }
